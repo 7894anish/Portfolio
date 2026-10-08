@@ -19,7 +19,7 @@ npm run typecheck
 npm run build
 ```
 
-`npm run build` creates the static website in `out/`. Deploy that directory to a static hosting provider. Use `npm run preview` after building to serve the production files locally.
+`npm run build` creates the static website in `out/`. Deploy that directory manually to Vercel, Netlify, GitHub Pages, Cloudflare Pages, or another host you control. Use `npm run preview` after building to serve the production files locally.
 
 ## Personalize before sharing publicly
 
@@ -65,6 +65,10 @@ npm run test:e2e
 Tests use the locally installed Chrome channel. Alternatively run `npx playwright install chromium` and remove `channel: "chrome"` in `playwright.config.ts`. Screenshots and test reports are ignored by Git. On Windows, start `npm run preview` in a separate terminal first so the test runner reuses it.
 
 The installed Next.js lint toolchain currently includes a development-only `braces` advisory (through `fast-glob`). npm's suggested forced fix downgrades the Next.js ESLint configuration by two major versions; it has intentionally not been applied. These lint dependencies are not shipped in the static website. Recheck with `npm audit` as upstream releases become available.
+
+## Deployment ownership
+
+This repository is a standalone Next.js project with no automatic deployment integration. Deployment happens only through the provider and account you choose.
 
 ## Optional next steps
 
