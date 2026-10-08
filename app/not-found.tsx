@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function NotFound() { return <main id="main-content" className="not-found container"><span className="eyebrow">404 / UNCHARTED TERRITORY</span><h1>This route leads<br />somewhere else<span className="accent">.</span></h1><p>The page you’re looking for isn’t here. There’s plenty to explore back at the portfolio.</p><Link className="button button-primary" href="/">Back to the portfolio</Link></main>; }
